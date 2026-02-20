@@ -34,6 +34,10 @@ bar = px.bar(
 
 st.plotly_chart(bar, use_container_width = True)
 
+num_players = filtered_df.shape[0]
+st.write("This chart shows the total number of tackles per player. For the {selected_position} position, there are {num_players} represented.
+         "We can see the trends of how many tackles each player commits as a {selected_position}."
+
 # Scatter plot of player tackles vs. interceptions
 scatter = px.scatter(
   filtered_df, x = "tackles", y = "interceptions", size = "minutes_played", color = "position", hover_name = "player_name", 
@@ -47,6 +51,11 @@ st.plotly_chart(scatter, use_container_width = True)
 
 corr = filtered_df["tackles"].corr(filtered_df["interceptions"])
 st.write(f"Correlation between tackles and interceptions: {corr:.2f}")
+
+st.write("For all positions except goalkeepers, there is a strong positive correlation (r>.7) between the number of tackles and interceptions. This
+         "suggests that players who engage in more tackles also tend to generate more interceptions, highlighting defensive effectiveness.")
+
+
 
 
 
