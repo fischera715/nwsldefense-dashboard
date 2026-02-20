@@ -82,7 +82,8 @@ st.write("This heatmap shows the average fouls, yellow cards, and red cards by p
         f"forwards commit the most fouls, defenders receive the most yellow cards, and goalkeepers receive the most red cards.")
 
 # Box for tackles per 90 minutes
-filtered_df['tackles_per_90'] = filtered_df['tackles'] / filtered_df['minutes_played'] * 90
+df["tackles_per_90"] = df["tackles"] / (df["minutes_played"] / 90)
+df_box = df[df["minutes_played"] > 0]
 
 box = px.box(
     df, x="position", y="tackles_per_90", color="position", points="all",
