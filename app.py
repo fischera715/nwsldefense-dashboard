@@ -4,6 +4,10 @@ import plotly.express as px
 
 st.title("NWSL Defensive Stats")
 
+st.markdown( """**Analytical Objective**
+This dashboard analyzes defensive performance for players in the National Womens Soccer Legue (NWSL), focussing on tackles, interceptions, 
+and other defensive metrics to identify key contributors or trends""")
+
 # Load CSV
 df = pd.read_csv("2023_nwsl_full.csv")
 
@@ -21,10 +25,28 @@ filtered_df = df[(df['position'] == selected_position) & (df['games_played'] >= 
 st.write(f"Showing {len(filtered_df)} players for {selected_position} with at least {min_games} games:")
 st.dataframe(filtered_df)
 
-fig = px.bar(
+# Bar plot to visualize players with the most tackles
+bar = px.bar(
   filtered_df, x = "player_name", y = "tackles", color = "tackles", title = "Total Tackles per Player", 
   labels = {"player_name": "Player Name", "tackles": "Total Tackles"},
   height = 500
   )
 
-st.plotly_chart(fig, use_container_width = True)
+st.plotly_chart(bar, use_container_width = True)
+
+# Scatter plot of player tackles vs. interceptions
+scatter = px.scatter(
+  filtered_df, x = "tackles", y = "interceptions", size = "minutes_played", color = "position", hover_name = "player_name", 
+  title = "Tackles vs. Interceptions per Player"
+  labels = {"tackles": "Total Tackles", "interceptions": "Total Interceptions"},
+  height = 500
+)
+
+st.plotly_chart(scatter, use_container_width = True)
+
+
+
+
+
+
+
