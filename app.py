@@ -62,7 +62,19 @@ st.write(f"Correlation between tackles and interceptions: {corr:.2f}")
 st.write("For all positions except goalkeepers, there is a strong positive correlation (r>.7) between the number of tackles and interceptions. This"
          "suggests that players who engage in more tackles also tend to generate more interceptions, highlighting defensive effectiveness.")
 
+# Heatmap of fouls and cards by position
+foul_metrics = ["fouls_committed", "yellow_cards", "red_cards"]
+position_average = df.groupby('position')[foul_metrics].mean
 
+heatmap = px.imshow(
+  position_average, labels = dict(x = "Metric", y = "Position", color = "Average Count"), x = foul_metrics, y = position_average.index, 
+  color_continuous_scale = 'Reds', title = "Average Fouls and Cards by Position"
+)
+
+st.plotly_chart(heatmap, use_container_width = True)
+
+st.write(f"This heatmap shows the average fouls, yellow cards, and red cards by position. It highlights which positions tend to commit more fouls"
+         f" or recieve more cards.")
 
 
 
