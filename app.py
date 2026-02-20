@@ -25,3 +25,5 @@ fig = px.bar(
   lables = {"player_name": "Player Name", "tackles": "Total Tackles"}
   height = 500
   )
+
+st.plotly_chart(fig, use_container_width = True)
