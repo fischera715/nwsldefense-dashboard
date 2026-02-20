@@ -81,18 +81,19 @@ st.write("This heatmap shows the average fouls, yellow cards, and red cards by p
          "It highlights which positions tend to commit more fouls or receive more cards. The heatmap shows that, on average, "
         f"forwards commit the most fouls, defenders receive the most yellow cards, and goalkeepers receive the most red cards.")
 
-# Line chart for tackles per 90 minutes
+# Box for tackles per 90 minutes
 filtered_df['tackles_per_90'] = filtered_df['tackles'] / filtered_df['minutes_played'] * 90
 
-line = px.line(
-  filtered_df.sort_values('tackles_per_90', ascending = False), x = "player_name", y = "tackles_per_90", 
-  title = f"Tackles per 90 minutes for {selected_position}", labels = {"player_name": "Player Name", "tackles_per_90": "Tackles per 90 Minutes"},
-  markers = True
+box = px.box(
+    df, x="position", y="tackles_avg_over_90_mins", color="position", points="all",
+    title="Distribution of Tackles per 90 Minutes by Position",
+    labels={"position": "Position", "tackles_per_90": "Tackles per 90 Minutes"},
+    height=500
 )
 
-st.plotly_chart(line, use_container_width = True)
+st.plotly_chart(box, use_container_width = True)
 
-st.write(f"This line chart shows the tackles per 90 minutes for {selected_position}. It normalizes defensive performance by playing time, "
+st.write(f"This box plot shows the tackles per 90 minutes for {selected_position}. It normalizes defensive performance by playing time, "
          f"highlighting what players are more effective regardless of playing time.")
   
 
