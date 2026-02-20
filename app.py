@@ -39,7 +39,7 @@ st.write(f"This chart shows the total number of tackles per player. For the {sel
          f" We can see the trends of how many tackles each player commits as a {selected_position}.")
 
 average_tackles = df.groupby('position')['tackles'].mean()
-selected_avg = average_taackles[selected_position]
+selected_avg = average_tackles[selected_position]
 
 st.write(f"On average, {selected_position} makes {selected_avg} tackles per season. The position with the highest average tackles is ")
 
