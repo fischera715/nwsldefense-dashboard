@@ -79,4 +79,3 @@ st.write(f"This heatmap shows the average fouls, yellow cards, and red cards by 
 
 
 
-
