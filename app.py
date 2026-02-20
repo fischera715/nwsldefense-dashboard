@@ -22,7 +22,7 @@ st.dataframe(filtered_df)
 
 fig = px.bar(
   filtered_df, x = "player_name", y = "tackles", color = "tackles", title = "Total Tackles per Player", 
-  lables = {"player_name": "Player Name", "tackles": "Total Tackles"}
+  lables = {"player_name": "Player Name", "tackles": "Total Tackles"},
   height = 500
   )
 
