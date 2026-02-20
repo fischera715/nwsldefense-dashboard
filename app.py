@@ -46,7 +46,7 @@ scatter = px.scatter(
 st.plotly_chart(scatter, use_container_width = True)
 
 corr = filtered_df["tackles"].corr(filtered_df["interceptions"])
-st.write(f"Correlation between tackles and interceptions: {corr.2f}")
+st.write(f"Correlation between tackles and interceptions: {corr:.2f}")
 
 
 
