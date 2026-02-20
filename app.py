@@ -94,10 +94,10 @@ box = px.box(
 
 st.plotly_chart(box, use_container_width = True)
 
-st.write(f"This box plot shows the tackles per 90 minutes for each position. It normalizes defensive performance by playing time, "
-         f"highlighting what players are more effective regardless of playing time. Defenders and midfielders tend to have the highest tackles per 90 minutes,"
-         f"with medians of .9467801 and 1.243094, respectively. A few individual players stand out, with much larger values, indicating "
-         f"exceptional defensive activity.")
+st.write(f"This box plot shows the tackles per 90 minutes for each position. It normalizes defensive performance by playing time,"
+         f" highlighting what players are more effective regardless of playing time. Defenders and midfielders tend to have the highest tackles per 90 minutes,"
+         f" with medians of .9467801 and 1.243094, respectively. A few individual players stand out, with much larger values, indicating"
+         f" exceptional defensive activity.")
   
 
 
