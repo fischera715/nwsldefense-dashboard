@@ -19,3 +19,9 @@ filtered_df = df[(df['position'] == selected_position) & (df['games_played'] >= 
 
 st.write(f"Showing {len(filtered_df)} players for {selected_position} with at least {min_games} games:")
 st.dataframe(filtered_df)
+
+fig = px.bar(
+  filtered_df, x = "player_name", y = "tackles", color = "tackles", title = "Total Tackles per Player", 
+  lables = {"player_name": "Player Name", "tackles": "Total Tackles"}
+  height = 500
+  )
