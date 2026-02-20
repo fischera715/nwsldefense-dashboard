@@ -37,7 +37,7 @@ st.plotly_chart(bar, use_container_width = True)
 # Scatter plot of player tackles vs. interceptions
 scatter = px.scatter(
   filtered_df, x = "tackles", y = "interceptions", size = "minutes_played", color = "position", hover_name = "player_name", 
-  title = "Tackles vs. Interceptions per Player"
+  title = "Tackles vs. Interceptions per Player",
   labels = {"tackles": "Total Tackles", "interceptions": "Total Interceptions"},
   height = 500
 )
