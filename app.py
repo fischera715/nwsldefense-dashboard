@@ -53,7 +53,7 @@ st.plotly_chart(scatter, use_container_width = True)
 corr = filtered_df["tackles"].corr(filtered_df["interceptions"])
 st.write(f"Correlation between tackles and interceptions: {corr:.2f}")
 
-st.write("For all positions except goalkeepers, there is a strong positive correlation (r>.7) between the number of tackles and interceptions. This
+st.write("For all positions except goalkeepers, there is a strong positive correlation (r>.7) between the number of tackles and interceptions. This"
          "suggests that players who engage in more tackles also tend to generate more interceptions, highlighting defensive effectiveness.")
 
 
