@@ -36,7 +36,8 @@ st.plotly_chart(bar, use_container_width = True)
 
 num_players = filtered_df.shape[0]
 st.write(f"This chart shows the total number of tackles per player. For the {selected_position} position, there are {num_players} represented."
-         f"We can see the trends of how many tackles each player commits as a {selected_position}.")
+         f"We can see the trends of how many tackles each player commits as a {selected_position}."
+        )
 
 # Scatter plot of player tackles vs. interceptions
 scatter = px.scatter(
