@@ -40,8 +40,10 @@ st.write(f"This chart shows the total number of tackles per player. For the {sel
 
 average_tackles = df.groupby('position')['tackles'].mean()
 selected_avg = average_tackles[selected_position]
+max_avg = max_avg = avg_tackles_by_position.max()
 
-st.write(f"On average, {selected_position} makes {selected_avg} tackles per season. The position with the highest average tackles is ")
+st.write(f"On average, {selected_position} makes {selected_avg} tackles per season. Defenders have the max number of average tackles ({max_avg})"
+         f", but are very similar to midfielders.")
 
 # Scatter plot of player tackles vs. interceptions
 scatter = px.scatter(
