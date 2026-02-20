@@ -10,7 +10,7 @@ st.write("Here are the first 5 rows of the data:")
 st.dataframe(df.head())
 
 position = df['position'].unique()
-selected_position = st.sidebar.selectbox("Select Position", options=positions)
+selected_position = st.sidebar.selectbox("Select Position", options=position)
 
 min_games = st.sidebar.slider("Minimum Games Played", min_value=0, max_value=int(df['games_played'].max()), value=0)
 
