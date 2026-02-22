@@ -8,7 +8,7 @@ with tab1:
   st.title("NWSL Defensive Stats")
 
   st.markdown( """**Analytical Objective**
-  This dashboard analyzes defensive performance for players in the National Womens Soccer Legue (NWSL), focussing on tackles, interceptions, 
+  This dashboard analyzes defensive performance for players in the National Womens Soccer League (NWSL), focusing on tackles, interceptions, 
   and other defensive metrics to identify key contributors or trends""")
   
   # Load CSV
