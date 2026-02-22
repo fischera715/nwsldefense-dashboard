@@ -1,17 +1,17 @@
 # NWSL Defensive Stats 
 
 ## Overview
-This interactive dashboard analyzes defensive performance for players in the National Womens Soccer Legue (NWSL). The analysis focuses on tackles, interceptions,
+This interactive dashboard analyzes defensive performance for players in the National Women's Soccer League (NWSL). The analysis focuses on tackles, interceptions,
 fouls, and other defensive metrics. The goal is to identify key contributors and trends, allowing users to explore how different positions perform 
 defensively. 
 
 This was built with **Streamlit** and uses **Plotly** for visualizations.
 
 ## Analytical Objective
-The purpose of this dashboard is to provide insights into defensive performance across the legue by
-  1. Comparing defensive metrics across different positions (defense, midfield, forward, goalkeeper)
+The purpose of this dashboard is to provide insights into defensive performance across the league by
+  1. Comparing defensive metrics across different positions (defender, midfielder, forward, goalkeeper)
   2. Normalizing performance metrics by playing time (per 90 minutes)
-  3. Highlghting individual players who contribute most to defensive actions
+  3. Highlighting individual players who contribute most to defensive actions
 
 ## Data Source
 The data used in this dashboard comes from Kaggle: 
