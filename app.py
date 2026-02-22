@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-tab1, tab2 = st.tabs(["League Overview"], ["Player Relationships"])
+tab1, tab2 = st.tabs(["League Overview", "Player Relationships"])
 
 with tab1: 
   st.title("NWSL Defensive Stats")
