@@ -12,7 +12,7 @@ with tab1:
   and other defensive metrics to identify key contributors or trends""")
   
   # Load CSV
-  df = pd.read_csv("2024_nwsl_full.csv")
+  df = pd.read_csv("2023_nwsl_full.csv")
   
   st.write("Here are the first 5 rows of the data:")
   st.dataframe(df.head())
